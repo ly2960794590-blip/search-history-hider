@@ -1,0 +1,13 @@
+/*
+ * Google 页面（首页和搜索结果页）搜索框下面的下拉列表。
+ * 整块隐藏：以前的搜索、"与近期搜索内容相关"、普通联想都不再显示。
+ * 只是不显示，账号里的搜索记录和浏览器历史记录都不受影响。
+ *
+ * .UUbT9 / .aajZCb 是 Google 目前给下拉面板用的类名，哪天改了，
+ * 最后一条 [role="listbox"] 规则仍然能把列表本身藏掉。
+ */
+form[role="search"] .UUbT9,
+form[role="search"] .aajZCb,
+form[role="search"] [role="listbox"] {
+  display: none !important;
+}

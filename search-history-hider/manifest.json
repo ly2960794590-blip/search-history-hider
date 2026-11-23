@@ -1,0 +1,20 @@
+{
+  "manifest_version": 3,
+  "name": "搜索记录隐藏",
+  "version": "1.1.0",
+  "description": "不删除任何历史记录，只是不让以前的搜索显示在搜索框下面：新标签页直接打开 Google 首页，并隐藏 Google 搜索框的下拉列表。",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.google.com/*",
+        "*://google.com/*",
+        "*://www.google.com.hk/*"
+      ],
+      "css": ["hide.css"],
+      "run_at": "document_start"
+    }
+  ]
+}
